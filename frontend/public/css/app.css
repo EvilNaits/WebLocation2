@@ -1,0 +1,276 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+
+}
+.products .products-item .Name-Car {
+    text-align: left;
+}
+.container .header-name {
+    padding-left: 17px;
+    margin-bottom: -10px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    font-weight: inherit;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+header {
+    border-bottom: 1px solid #eee ;
+    background-color: white ;
+
+}
+
+header .container {
+    align-items: center;
+    display: flex;
+    padding: 10px;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.products .products-item {
+    width: calc(25% - 45px);
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: revert;
+}
+.products .products-item:hover{
+    transform: scale(1.05);
+}
+.products .products-item img{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow:0 0 20px black;
+
+}
+.products .products-item .Price {
+    font-weight: bold;
+    font-size: 20px;
+}
+.products .products-item .Old-Price {
+    text-decoration: line-through;
+    margin-left: 15px;
+    color: #aaa;
+}
+.products .products-item .mileage {
+    color: #aaa;
+}
+
+
+.products .products-item .Price-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.products .products-item .card-icon {
+    border: 2px solid powderblue;
+    width: 45%;
+    padding: 3px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: powderblue;
+    box-shadow:0 0 25px white;
+
+}
+.slider {
+    box-shadow:0 2px 10px gray;
+}
+.products .products-item .Button-buy {
+    text-align: right;
+}
+
+.products .products-item .card-icon:hover {
+
+    border: 2px solid powderblue;
+    box-shadow:0 0 15px skyblue;
+
+}
+
+main {
+    padding-left: 0;
+    margin-bottom: 30px;
+
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+
+}
+footer {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: white;
+
+}
+
+.login {
+    background-color: white;
+    box-shadow:0 0 7px #673091;
+    width: 600px;
+    height: 400px;
+    margin: 50px auto;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+.login .Name-login {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.input-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-form input {
+    width: 50%;
+    padding: 4px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 2px solid skyblue;
+    outline: none;
+    ;
+}
+.input-form input:focus {
+    box-shadow:0 0 3px #c01a1a;
+    border: 2px solid #c01a1a;
+}
+
+.Button-input{
+    padding: 15px;
+}
+
+.Button-input .Button-card {
+
+    background-color: powderblue;
+    width: 110px;
+    height: 32px;
+    border: 3px solid powderblue;
+    border-radius: 9px;
+    font-weight: bold;
+}
+.Button-input .Button-card:hover {
+    border: 2px solid powderblue;
+    box-shadow:0 0 15px skyblue;
+}
+
+.Button-reg .Button-card{
+    background-color: powderblue;
+    width: 210px;
+    height: 32px;
+    border: 3px solid powderblue;
+    border-radius: 9px;
+    font-weight: bold;
+
+}
+.Button-reg .Button-card:hover {
+    border: 2px solid powderblue;
+    box-shadow:0 0 15px skyblue;
+
+}
+
+.Button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-flow: column-reverse;
+}
+.registration .Name-registration {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.registration {
+    background-color: white;
+    width: 600px;
+    height: 500px;
+    margin: 50px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow:0 0 7px #673091;
+}
+
+.slider {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.slider img{
+    width: 100%;
+    height: 300px;
+
+}
+
+.Name-Car {
+    margin: 10px auto;
+}
+
+div#error {
+    text-align: center;
+    margin-bottom: 20px;
+    color: red;
+}
+
+@media screen  and (max-width: 768px) {
+    .products .products-item{
+        width: 75%;
+    }
+    .products .products-item .card-icon {
+        width: 30%;
+    }
+    .login {
+        width: 75%;
+    }
+
+}
+
+@media screen  and (max-width: 425px){
+    .products .products-item {
+        width: 100%;
+    }
+
+    .products .products-item .card-icon {
+        width: 30%;
+    }
+    .login {
+        width: 75%;
+    }
+}
+
+.btn:hover {
+    background-color: #501987;
+    border-color: #501987;
+}
+.btn-outline-success {
+    --bs-btn-color: #501987;
+    --bs-btn-border-color: #501987;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #501987;
+    --bs-btn-hover-border-color: #501987;
+    --bs-btn-focus-shadow-rgb: 25, 135, 84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #501987;
+    --bs-btn-active-border-color: #501987;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #501987;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #501987;
+    --bs-gradient: none;
+}

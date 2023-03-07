@@ -5,28 +5,57 @@
     <title>AutoBar</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="image/icon.jpg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" >
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="frontend/public/css/app.css" rel="stylesheet">
+
 </head>
 <body>
   <header>
     <div class="container">
-      <div class ="brand">
-        <a href="Name.html"><img src="image/Logo.jpg"></a>
-      </div>
-      <nav class="navigation">
-        <ul>
-          <li><a href="Web.html"> Каталог</a> </li>
-          <li><a href="">Топ-10 машин</a></li>
-          <li><a href="">Легковые</a></li>
-          <li><a href="">Грузовые</a></li>
-          <li><a href="">Мото</a></li>
-          <li><a href="">О нас</a></li>
-          <li><a href="">Корзина</a></li>
-          <li><a href="login.html">Войти</a></li>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="Home.html"><img src="image/1.jpg"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="Catalog.html">Каталог</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Cars.html">Легковые</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Gruz.html">Грузовые</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Мото</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">О нас</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Корзина</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Войти</a>
+              </li>
 
-        </ul>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+              <button class="btn btn-outline-success" type="submit">Поиск</button>
+
+            </form>
+
+
+
+
+          </div>
+
+        </div>
       </nav>
 
     </div>
@@ -42,10 +71,10 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="/image/banner.png" class="d-block w-100" alt="...">
+            <img src="/image/Banner1.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="/image/banner2.png" class="d-block w-100" alt="...">
+            <img src="/image/Banner2.png" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -59,7 +88,7 @@
       </div>
     </section>
     <div class="container">
-      <h2 class="Top">Топ-3 продаж</h2>
+      <h3 class="header-name">Рекомендуем</h3>
       <div class="products">
         <div class="products-item">
           <div>
@@ -69,10 +98,10 @@
             <div class="Price">100 400 000 ₽ </div>
           </div>
 
-          <h5>Koenigsegg Agera RS</h5>
-
-          <div>
-            <button class="card-icon"><a href="">Купить</a></button>
+          <h5 class="Name-Car">Koenigsegg Agera RS</h5>
+          <div class="mileage">2023/2 000 км</div>
+          <div class="Button-buy">
+            <button class="card-icon">Купить</button>
           </div>
 
         </div>
@@ -84,9 +113,10 @@
             <div class="Price">17 670 000 ₽ </div>
           </div>
 
-          <h5>Lamborghini Aventador</h5>
-          <div>
-            <button class="card-icon"><a href="">Купить</a></button>
+          <h5 class="Name-Car">Lamborghini Aventador</h5>
+          <div class="mileage">2022/5 300 км</div>
+          <div class="Button-buy">
+            <button class="card-icon">Купить</button>
           </div>
         </div>
         <div class="products-item">
@@ -97,9 +127,10 @@
             <div class="Price">8 300 000 ₽ </div>
           </div>
 
-          <h5>BMW M4</h5>
-          <div>
-            <button class="card-icon"><a href="">Купить</a></button>
+          <h5 class="Name-Car">BMW M4</h5>
+          <div class="mileage">2021/10 570 км</div>
+          <div class="Button-buy">
+            <button class="card-icon">Купить</button>
           </div>
         </div>
       </div>
@@ -119,6 +150,7 @@
 
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/JS/Main.js"></script>
 </body>
 
 
