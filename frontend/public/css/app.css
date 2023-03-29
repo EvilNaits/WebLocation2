@@ -108,12 +108,34 @@ main {
 footer .container {
     display: flex;
     justify-content: space-between;
+    color: white;
 
+    font-size: 15px;
+}
+.contacts {
+    display: flex;
+    flex-direction: row;
+}
+.contacts img {
+    width: 37px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.color-text {
+    color: powderblue;
+}
+
+.pay-system {
+    display: flex;
+    flex-direction: row;
+}
+.pay-system img {
+    margin-right: 10px;
 }
 footer {
     margin-top: 5px;
-    padding: 5px;
-    background-color: white;
+    padding: 30px;
+    background-color: #26212a;
 
 }
 
@@ -273,4 +295,7 @@ div#error {
     --bs-btn-disabled-bg: transparent;
     --bs-btn-disabled-border-color: #501987;
     --bs-gradient: none;
+}
+.container-fluid .Brand {
+    padding-right: 20px;
 }
