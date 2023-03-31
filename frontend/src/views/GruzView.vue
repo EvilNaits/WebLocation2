@@ -4,117 +4,35 @@
     <div class="container">
       <h3 class="header-name"><router-link to="#">Грузовые автомобили</router-link></h3>
       <div class="products">
-        <div class="products-item">
-          <div>
-            <router-link to="#"><img src="/image/Volvo.jpg"></router-link>
-          </div>
-          <div class="Price-container">
-            <div class="Price">12 300 000 ₽ </div>
-          </div>
-
-          <h5 class="Name-Car">Volvo track</h5>
-          <div class="mileage">2018/58 700 км</div>
-          <div class="Button-buy">
-            <button class="card-icon">Купить</button>
-          </div>
-        </div>
-        <div class="products-item">
-          <div>
-            <router-link to="#"><img src="/image/iveco.jpg"></router-link>
-          </div>
-          <div class="Price-container">
-            <div class="Price">10 150 950 ₽ </div>
-            <div class="Old-Price"> 10 300 000 ₽</div>
-          </div>
-
-          <h5 class="Name-Car">Iveco track</h5>
-          <div class="mileage">2019/106 300 км</div>
-          <div class="Button-buy">
-            <button class="card-icon">Купить</button>
-          </div>
-        </div>
-        <div class="products-item">
-          <div>
-            <router-link to="#"><img src="/image/Mersedes.jpg"></router-link>
-          </div>
-          <div class="Price-container">
-            <div class="Price">11 300 599 ₽ </div>
-          </div>
-
-          <h5 class="Name-Car">Mercedes Actros</h5>
-          <div class="mileage">2020/43 000 км</div>
-          <div class="Button-buy">
-            <button class="card-icon">Купить</button>
-          </div>
-        </div>
-        <div class="products-item">
-          <div>
-            <router-link to="#"><img src="/image/ScaniaR500.jpg"></router-link>
-          </div>
-          <div class="Price-container">
-            <div class="Price">14 120 000 ₽ </div>
-            <div class="Old-Price"> 14 900 000 ₽</div>
-          </div>
-
-          <h5 class="Name-Car">Scania R500</h5>
-          <div class="mileage">2018/98 300 км</div>
-          <div class="Button-buy">
-            <button class="card-icon">Купить</button>
-          </div>
-        </div>
-        <div class="products-item">
-          <div>
-            <router-link to="#"><img src="/image/ScaniaG400.jpg"></router-link>
-          </div>
-          <div class="Price-container">
-            <div class="Price">8 300 000 ₽ </div>
-          </div>
-
-          <h5 class="Name-Car">Scania G400</h5>
-          <div class="mileage">2016/85 500 км</div>
-          <div class="Button-buy">
-            <button class="card-icon">Купить</button>
-          </div>
-        </div>
-        <div class="products-item">
-          <div>
-            <router-link to="#"><img src="/image/Daf%20XF%20106.jpg"></router-link>
-          </div>
-          <div class="Price-container">
-            <div class="Price">10 100 000 ₽ </div>
-            <div class="Old-Price"> 10 550 000 ₽</div>
-          </div>
-
-          <h5 class="Name-Car">Daf XF 106</h5>
-          <div class="mileage">2015/110 300 км</div>
-          <div class="Button-buy">
-            <button class="card-icon">Купить</button>
-          </div>
-        </div>
-        <div class="products-item">
-          <div>
-            <router-link to="#"><img src="/image/DafXF105.jpg"></router-link>
-          </div>
-          <div class="Price-container">
-            <div class="Price">9 000 000 ₽ </div>
-          </div>
-
-          <h5 class="Name-Car">Daf XF 105</h5>
-          <div class="mileage">2014/150 000 км</div>
-          <div class="Button-buy">
-            <button class="card-icon">Купить</button>
-          </div>
+        <div class="products-item" v-for="item in items">
+            <ProductItem :product="item"></ProductItem>
         </div>
       </div>
-
-
     </div>
 
   </main>
 </template>
 
 <script>
+  import ProductItem from "@/components/Product/ProductItem.vue";
+
   export default {
     name: "GruzView",
+    components: {ProductItem},
+    props: ['product'],
+    data() {
+        return {
+            items: [
+                {price: '12 300 000 ₽ ',  picture:'/image/Volvo.jpg',name:'Volvo track',  meleage: '2018/58 700 км'},
+                {price: '10 150 950 ₽ ', oldPrice: '10 300 000 ₽', picture:'/image/iveco.jpg',name:'Iveco track',  meleage: '2019/106 300 км'},
+                {price: '11 300 599 ₽ ',  picture:'/image/Mersedes.jpg',name:'Mercedes Actros',  meleage: '2020/43 000 км'},
+                {price: '14 120 000 ₽ ', oldPrice: '14 900 000 ₽', picture:'/image/ScaniaR500.jpg',name:'Scania R500',  meleage: '2018/98 300 км'},
+                {price: '8 300 000 ₽ ',  picture:'/image/ScaniaG400.jpg',name:'Daf XF 106',  meleage: '2015/110 300 км'},
+                {price: '10 100 000 ₽  ', oldPrice: '10 550 000 ₽', picture:'/image/Daf%20XF%20106.jpg',name:'Scania R500',  meleage: '2018/98 300 км'},
+                {price: '9 000 000 ₽ ', oldPrice: '10 550 000 ₽', picture:'/image/DafXF105.jpg', name:'Daf XF 105',  meleage: '2014/150 000 км'},
+            ]
+        }
+    }
+
   }
 </script>
