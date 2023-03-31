@@ -41,6 +41,7 @@ header .container {
     border-radius: 10px;
     box-sizing: revert;
 }
+
 .products .products-item:hover{
     transform: scale(1.05);
 }
@@ -86,6 +87,16 @@ a {
     box-shadow:0 0 25px white;
 
 }
+
+.products .products-item .card-icon-click {
+    border: 2px solid powderblue;
+    width: 45%;
+    padding: 3px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: white;
+    box-shadow:0 0 25px white;
+}
 .slider {
     box-shadow:0 2px 10px gray;
 }
@@ -103,6 +114,7 @@ a {
 main {
     padding-left: 0;
     margin-bottom: 30px;
+
 
 }
 footer .container {
@@ -139,6 +151,8 @@ footer {
 
 }
 
+
+
 .login {
     background-color: white;
     box-shadow:0 0 7px #673091;
@@ -167,7 +181,7 @@ footer {
     border-radius: 10px;
     border: 2px solid skyblue;
     outline: none;
-    ;
+
 }
 .input-form input:focus {
     box-shadow:0 0 3px #c01a1a;
@@ -221,7 +235,7 @@ footer {
 .registration {
     background-color: white;
     width: 600px;
-    height: 500px;
+    height: 620px;
     margin: 50px auto;
     padding: 15px;
     border-radius: 10px;
@@ -244,10 +258,11 @@ footer {
     margin: 10px auto;
 }
 
-div#error {
+.error {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: red;
+    margin-top: 10px;
 }
 
 @media screen  and (max-width: 768px) {
@@ -299,3 +314,4 @@ div#error {
 .container-fluid .Brand {
     padding-right: 20px;
 }
+

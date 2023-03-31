@@ -4,14 +4,17 @@
 
       <h4 class ="Name-login">Авторизация </h4>
 
-      <form id="form-authorization">
+      <form @submit="loginForm">
         <div class="input-form">
-          <input type="text" name="login" placeholder="Введите Email">
+          <input type="text" name="login" placeholder="Введите Email" v-model="email">
+            <div class="error">{{emailError}}</div>
         </div>
+
         <div class="input-form">
-          <input type="password" name="password" placeholder="Введите пароль">
+          <input type="password" name="password" placeholder="Введите пароль" v-model="password">
+            <div class="error">{{passwordError}}</div>
         </div>
-        <div id="error"></div>
+
         <div class="Button">
           <div class="Button-input">
             <button class="Button-card" type="submit">Войти</button>
@@ -29,6 +32,36 @@
 
 <script>
 export default {
-  name: "AuthorizationView"
+  name: "AuthorizationView",
+  data() {
+      return {
+          email: '',
+          password: '',
+          emailError: '',
+          passwordError: ''
+      }
+  },
+  methods: {
+      loginForm(event) {
+        this.emailError = ''
+        this.passwordError = ''
+
+        if (this.email.trim() === '') {
+            this.emailError = 'Заполните Email!'
+        }
+        else  if (this.email.length < 5) {
+              this.emailError = "Введите корректный Email!"
+          }
+        if (this.password.trim() === '') {
+            this.passwordError = 'Заполните пароль!'
+        }
+        else if (this.password.length < 8) {
+            this.passwordError = 'Пароль должен иметь не менее 8 символов!'
+        }
+
+        event.preventDefault()
+      }
+
+  }
 }
 </script>

@@ -60,7 +60,7 @@
     <div class="container">
       <div>
         <p>По всем вопросам пишите:
-            <span class="color-text">mail@mail.ru</span>
+            <span class="color-text">oleg01092002.3@mail.ru</span>
         </p>
         <p>Следите за нами в социальных сетях:</p>
         <div class="contacts">
@@ -69,7 +69,6 @@
             <img src="/image/insta.png">
         </div>
       </div>
-        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/4/belgorod/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Белгород</a><a href="https://yandex.ru/maps/4/belgorod/?ll=36.608638%2C50.618401&mode=routes&rtext=~50.618552%2C36.609700&rtt=pd&ruri=~&utm_medium=mapframe&utm_source=maps&z=14.54" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=36.608638%2C50.618401&mode=routes&rtext=~50.618552%2C36.609700&rtt=pd&ruri=~&z=14.54" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
       <div>
           <p>Наши контакты:
               <span class="color-text">+7 999 888 7777</span>

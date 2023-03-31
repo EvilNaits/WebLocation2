@@ -1,80 +1,35 @@
 <template>
   <main>
-    <section class="slider">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/image/Banner1.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="/image/Banner2.jpg" class="d-block w-100" alt="...">
-                </div>
-
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Предыдущий</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Следующий</span>
-            </button>
-        </div>
-    </section>
+    <Slider></Slider>
     <div class="container">
       <h3 class="header-name">Рекомендуем</h3>
       <div class="products">
-        <div class="products-item">
-          <div>
-            <router-link to="#"><img src="/image/Agera.jpg"></router-link>
+          <div class="products-item" v-for="item in items">
+            <ProductItem :product="item"></ProductItem>
           </div>
-          <div class="Price-container">
-            <div class="Price">100 400 000 ₽ </div>
-          </div>
-
-          <h5 class="Name-Car">Koenigsegg Agera RS</h5>
-          <div class="mileage">2023/2 000 км</div>
-          <div class="Button-buy">
-            <button class="card-icon">Купить</button>
-          </div>
-
-        </div>
-        <div class="products-item">
-          <div>
-            <router-link to="#"><img src="/image/Aventador.jpg"></router-link>
-          </div>
-          <div class="Price-container">
-            <div class="Price">17 670 000 ₽ </div>
-          </div>
-
-          <h5 class="Name-Car">Lamborghini Aventador</h5>
-          <div class="mileage">2022/5 300 км</div>
-          <div class="Button-buy">
-            <button class="card-icon">Купить</button>
-          </div>
-        </div>
-        <div class="products-item">
-          <div>
-            <router-link to ="#"><img src="/image/M4.jpg"></router-link>
-          </div>
-          <div class="Price-container">
-            <div class="Price">8 300 000 ₽ </div>
-          </div>
-
-          <h5 class="Name-Car">BMW M4</h5>
-          <div class="mileage">2021/10 570 км</div>
-          <div class="Button-buy">
-            <button class="card-icon">Купить</button>
-          </div>
-        </div>
       </div>
     </div>
   </main>
 </template>
 
 <script>
+  import ProductItem from "@/components/Product/ProductItem"
+  import Slider from "@/components/Slider/Slider";
+
   export default {
     name: 'HomeView',
+    components: {Slider, ProductItem},
+    props: ['product'],
+    data() {
+        return {
+          items: [
+              {price: '12 105 000', picture:'/image/R8.jpg',name:'Audi R8',  meleage: '2017/14 999 км'},
+              {price: '15 000 000', oldPrice:'9 500 000 ₽', picture:'/image/Aventador1.jpg', name:'Lamborghini Aventador',  meleage: '2020/3 000 км'},
+              {price: '100 000 000', picture:'/image/Agera.jpg' ,name:'Koenigsegg Agera RS',  meleage: '2023/0 км'},
+              {price: '17 999 999', picture:'/image/Ferrari.jpg',name:'Ferrari 488',  meleage: '2013/33 999 км'},
+          ]
+        }
+    }
 
   }
 </script>
