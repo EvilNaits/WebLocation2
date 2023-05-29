@@ -4,31 +4,44 @@ body {
     padding: 0;
     margin: 0;
 
+
 }
 .products .products-item .Name-Car {
     text-align: left;
 }
 .container .header-name {
     padding-left: 17px;
-    margin-bottom: -10px;
-    padding-top: 27px;
+    margin-bottom: -15px;
+    padding-top: 30px;
     padding-bottom: 27px;
     font-weight: inherit;
 }
 .container {
     max-width: 1400px;
-    margin: 0 auto;
+    margin-bottom: -12px;
+    margin-top: -16px;
 }
 header {
     border-bottom: 1px solid #eee ;
-    background-color: white ;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+
 
 }
 
-header .container {
-    align-items: center;
+.navigation img {
+    border-radius: 71px;
+    width: 43px;
+    height: 44px;
+    margin-left: 10px;
+    padding: 4px;
+}
+
+
+.navigation {
     display: flex;
-    padding: 10px;
+    margin-left: 100px
 }
 .products {
     display: flex;
@@ -55,7 +68,7 @@ header .container {
     font-weight: bold;
     font-size: 20px;
 }
-.products .products-item .Old-Price {
+.Old-Price {
     text-decoration: line-through;
     margin-left: 15px;
     color: #aaa;
@@ -78,24 +91,24 @@ a {
 }
 
 .products .products-item .card-icon {
-    border: 2px solid powderblue;
+
     width: 45%;
     padding: 3px;
-    border-radius: 5px;
-    font-weight: bold;
     background-color: powderblue;
-    box-shadow:0 0 25px white;
+    border: 2px solid powderblue;
+    border-radius: 8px;
+    font-weight: bold;
+
 
 }
 
 .products .products-item .card-icon-click {
-    border: 2px solid powderblue;
-    width: 45%;
     padding: 3px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: bold;
     background-color: white;
-    box-shadow:0 0 25px white;
+    animation: color-change-buy 0.5s linear both;
+
 }
 .slider {
     box-shadow:0 2px 10px gray;
@@ -104,12 +117,59 @@ a {
     text-align: right;
 }
 
+
 .products .products-item .card-icon:hover {
-
-    border: 2px solid powderblue;
-    box-shadow:0 0 15px skyblue;
-
+    animation: color-change 0.5s linear both;
 }
+@keyframes color-change-buy {
+    from {
+        background-color: #ff5c5c;
+        border: 2px solid #ff5c5c;
+        width: 100%;
+
+    }
+    50% {
+        background-color: #fa7777;
+        border: 2px solid #fa7777;
+        width: 85%;
+    }
+    75% {
+        background-color: #f6b9b9;
+        border: 2px solid #f6b9b9;
+        width: 70%;
+    }
+    to {
+        background-color: blueviolet;
+        border: 2px solid blueviolet;
+        width: 45%;
+
+    }
+}
+@keyframes color-change {
+    from {
+        background-color: powderblue;
+        border: 2px solid powderblue;
+
+    }
+    50% {
+        background-color: #f6b9b9;
+        border: 2px solid #f6b9b9;
+        width: 70%;
+
+    }
+    75% {
+        background-color: #fa7777;
+        border: 2px solid #fa7777;
+        width: 85%;
+    }
+    to {
+        background-color: #ff5c5c;
+        border: 2px solid #ff5c5c;
+        width: 100%;
+    }
+}
+
+
 
 main {
     padding-left: 0;
@@ -135,6 +195,8 @@ footer .container {
 }
 .color-text {
     color: powderblue;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .pay-system {
@@ -315,3 +377,133 @@ footer {
     padding-right: 20px;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.container-card {
+    display: flex;
+    margin-left: 15%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    align-items: center;
+
+}
+.name-card {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.container-card img {
+    max-width: 650px;
+    border-radius: 10px;
+    box-shadow:0 0 20px black;
+
+}
+
+.container-description {
+    margin-left: 50px;
+    padding: 30px;
+    width: 35%;
+    background-color: #f8f8f8;
+    box-shadow:0 0 20px #eeeeee;
+    border-radius: 10px;
+    border: 5px solid #eeeeee;
+
+}
+.card-pay {
+    text-align: center;
+
+}
+.card-button-pay {
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    background-color: darkviolet;
+    color: white;
+    border: 2px solid darkviolet;
+    border-radius: 8px;
+    font-weight: bold;
+
+}
+.card-button-pay:hover {
+    box-shadow: 0 0 10px darkviolet;
+
+}
+.description {
+    list-style: none;
+    padding-left: 0;
+}
+.navigation h6 {
+    margin-top: 10px;
+}
+.description li span{
+    width: 50%;
+    display: inline-block;
+    padding-bottom: 15px;
+    font-size: 17px;
+}
+.description li span:first-child {
+    text-align: left;
+}
+.description li span:last-child {
+    text-align: right;
+}
+.container .block:hover {
+    transform: scale(1.05);
+}
+.container .block {
+    width: 1000px;
+
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+
+}
+.button_basket .Old-Price {
+    text-align: center;
+}
+.container .block img {
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px black;
+    margin: 30px;
+}
+.block .card-button-pay {
+    width: 500px;
+
+}
+.config_in_basket {
+    text-align: center;
+    padding: 10px;
+}
+.button_basket .name-card{
+    font-size: 24px;
+}
+
+.button_basket .Price-container {
+    display: flex;
+    align-items: center;
+    margin-left: 70px;
+    margin-bottom: 5px;
+    margin-left: 100px;
+}
+.card-delete {
+    width: 400px;
+    height: 40px;
+    background-color: #a20453;
+    color: white;
+    border: 2px solid #a20453;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+.card-delete:hover {
+    box-shadow: 0 0 10px #a20453;
+}

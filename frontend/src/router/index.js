@@ -5,6 +5,9 @@ import CarsView from "@/views/CarsView.vue";
 import GruzView from "@/views/GruzView.vue";
 import AuthorizationView from "@/views/AuthorizationView.vue";
 import RegistrationView from "@/views/RegistrationView.vue";
+import AboutCompanyView from "@/views/AboutCompanyView.vue";
+import CardView from "@/views/CardView.vue";
+import BasketView from "@/views/BasketView.vue";
 
 const routes = [
   {
@@ -37,6 +40,24 @@ const routes = [
     name: 'registration',
     component: RegistrationView
   },
+  {
+    path: '/catalog/:id',
+    name: 'catalogCard',
+    component: CardView
+  },
+
+  {
+    path: '/aboutcompany',
+    name: 'aboutcompany',
+    component: AboutCompanyView
+  },
+
+  {
+    path: '/basket',
+    name: 'basket',
+    component: BasketView
+  }
+
 
 ]
 

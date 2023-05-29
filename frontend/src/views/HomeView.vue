@@ -15,20 +15,18 @@
 <script>
   import ProductItem from "@/components/Product/ProductItem"
   import Slider from "@/components/Slider/Slider";
-
+  import axios from "axios";
   export default {
     name: 'HomeView',
     components: {Slider, ProductItem},
-    props: ['product'],
     data() {
         return {
-          items: [
-              {price: '12 105 000', picture:'/image/R8.jpg',name:'Audi R8',  meleage: '2017/14 999 км'},
-              {price: '15 000 000', oldPrice:'9 500 000 ₽', picture:'/image/Aventador1.jpg', name:'Lamborghini Aventador',  meleage: '2020/3 000 км'},
-              {price: '100 000 000', picture:'/image/Agera.jpg' ,name:'Koenigsegg Agera RS',  meleage: '2023/0 км'},
-              {price: '17 999 999', picture:'/image/Ferrari.jpg',name:'Ferrari 488',  meleage: '2013/33 999 км'},
-          ]
+          items: []
         }
+    },
+    created() {
+        axios.get('http://localhost/api/products/top')
+            .then((result)=> this.items = result.data)
     }
 
   }

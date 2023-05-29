@@ -2,7 +2,7 @@
   <header>
     <div class="container">
       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container-fluid m-4">
             <div class="Brand">
               <router-link to="/"><img src="/image/1.jpg"></router-link>
             </div>
@@ -10,7 +10,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-4 mb-2 mb-lg-0">
               <li class="nav-item">
                 <router-link to="/catalog" class="nav-link">Каталог</router-link>
               </li>
@@ -20,35 +20,31 @@
               <li class="nav-item">
                 <router-link to="/gruz" class="nav-link">Грузовые</router-link>
               </li>
-              <li class="nav-item">
-                <router-link to="#" class="nav-link"> Мото</router-link>
 
+              <li class="nav-item">
+                <router-link to="/aboutcompany" class="nav-link"> О нас</router-link>
               </li>
               <li class="nav-item">
-                <router-link to="#" class="nav-link"> О нас</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link to="#" class="nav-link"> Корзина</router-link>
+                <router-link to="/basket" class="nav-link"> Корзина</router-link>
               </li>
               <li class="nav-item">
                 <router-link to="/authorization" class="nav-link">Войти</router-link>
               </li>
+              <li class="nav-item">
 
-
+              </li>
             </ul>
-            <form class="d-flex px-5" role="search">
-              <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
-              <button class="btn btn-outline-success" type="submit">Поиск</button>
-            </form>
-            <form class="d-flex " role="search">
-              <button class="btn btn-outline-success btn:hover: #501987" type="submit">Разместить объявление</button>
-            </form>
-
-
-
-
+              <div class="navigation">
+                  <router-link to="#"><img src="/image/2.jpg"></router-link>
+                  <router-link to="#"><img src="/image/car.jpg"></router-link>
+                  <h6 v-show="this.$store.getters.getCount>0">{{this.$store.getters.getCount}}</h6>
+                  <router-link to="#"><img src="/image/sms.png"></router-link>
+              </div>
           </div>
-
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+                <button class="btn btn-outline-success" type="submit">Поиск</button>
+            </form>
         </div>
       </nav>
 
@@ -56,6 +52,7 @@
 
   </header>
   <router-view/>
+
   <footer>
     <div class="container">
       <div>
