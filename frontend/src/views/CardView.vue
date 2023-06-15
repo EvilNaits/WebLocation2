@@ -31,7 +31,8 @@
             <p class="name-card">{{product.price}} ₽</p>
 
             <div class="card-pay">
-            <button class="card-button-pay">Купить</button>
+            <button class="card-button-pay" @click="addToCard" v-show="!this.product.inCard">Купить</button>
+                <button class="card-button-delete" @click="removeCard" v-show="this.product.inCard"> Добавлено в корзину</button>
             </div>
         </div>
 
@@ -43,7 +44,19 @@
  import axios from "axios";
 export default {
     name: "CardView",
+    props: ['product'],
+    methods: {
+        addToCard() {
+            this.product.inCard = !this.product.inCard
+            this.$store.commit('add',this.product.id)
 
+        },
+
+        removeCard() {
+            this.product.inCard = !this.product.inCard
+            this.$store.commit('remove',this.product.id)
+        }
+    },
     data() {
         return {
             product: {}

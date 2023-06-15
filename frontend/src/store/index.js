@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-
+import axios from "axios";
 export default createStore({
   state: {
     cart: {
@@ -14,6 +14,7 @@ export default createStore({
       if(data !== null) {
         state.cart = JSON.parse(data)
       }
+
       return state.cart.count
     }
   },
@@ -30,6 +31,7 @@ export default createStore({
     }
   },
   actions: {
+
   },
   modules: {
   }

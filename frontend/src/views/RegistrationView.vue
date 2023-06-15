@@ -38,6 +38,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "RegistrationView",
   data(){
@@ -87,6 +89,20 @@ export default {
 
           if (this.surname.trim() === '') {
               this.surnameError = 'Заполните фамилию!'
+          }
+          if (!this.emailError && !this.passwordError && !this.nameError && !this.surnameError && !this.phoneError) {
+              const request = {
+                  email: this.email,
+                  password: this.password,
+                  name: this.Name,
+                  surname: this.surname,
+                  phone: this.phone
+              }
+              axios.post('http://localhost/api/user/registration', request)
+                  .then((response) => {})
+                  .catch((error) => {
+                      alert(error.message)
+                  })
           }
 
           event.preventDefault()

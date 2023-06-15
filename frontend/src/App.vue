@@ -79,11 +79,22 @@
           <hr>
           <p>© 2023 ООО "AutoBar" г.Белгород</p>
           <p>ул. Студенческая д.8</p>
-
       </div>
-
     </div>
-
+    <div class = "container">
+        <p class="footer-description">Обращаем ваше внимание на то, что данный Интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации. Для получения подробной информации о стоимости автомобилей Audi, BAIC, BMW, Chery, Chrysler, Evolute, Exeed, Ford, Genesis, Hyundai, Jaguar, Jeep, KAIYI, Kia, Land Rover, Lexus, Mazda, Mercedes-Benz, Mitsubishi, Nissan, OMODA, Porsche, Renault, SKODA, Sollers, Toyota, Volkswagen, Voyah, Москвич обращайтесь к менеджерам по продажам в автоцентры AutoBar. Для получения информации о приобретении автомобилей в кредит, страховании, техническом обслуживании и ремонте автомобилей, запасных частях, дополнительном оборудовании, аксессуарах также обращайтесь в сервисные центры и автосалоны AutoBar.</p>
+    </div>
+    <div class = "container">
+        <div class = "footer-button">
+        <button class="button">Мобильное приложение</button>
+        <button class="button">
+            <img src="/image/APPLE_icon-icons.com_65545.png">Для IPhone
+        </button>
+        <button class="button">
+            <img src="/image/ANDROID_icon-icons.com_65547.png">Для Android
+        </button>
+        </div>
+    </div>
   </footer>
 </template>
 

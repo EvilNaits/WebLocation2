@@ -6,8 +6,6 @@
                     <div class="">
                         <img src ="/image/Gtr.jpeg">
                     </div>
-
-
                     <div class="button_basket">
                         <h3 class="config_in_basket">Имя машины</h3>
                         <div class="Price-container">

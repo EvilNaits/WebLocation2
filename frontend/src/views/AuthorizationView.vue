@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "AuthorizationView",
   data() {
@@ -57,6 +58,18 @@ export default {
         }
         else if (this.password.length < 8) {
             this.passwordError = 'Пароль должен иметь не менее 8 символов!'
+        }
+        if (!this.emailError && !this.passwordError) {
+            const request = {
+                email: this.email,
+                password: this.password
+
+            }
+            axios.post('http://localhost/api/user/login', request)
+                .then((response) => {})
+                .catch((error) => {
+                    alert(error.message)
+                })
         }
 
         event.preventDefault()

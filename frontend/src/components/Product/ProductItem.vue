@@ -16,8 +16,8 @@
         </div>
 
 </template>
-
 <script>
+
 export default {
     name: "ProductItem",
     props: ['product'],
@@ -25,6 +25,7 @@ export default {
         addToCard() {
             this.product.inCard = !this.product.inCard
             this.$store.commit('add',this.product.id)
+
         },
 
         removeCard() {

@@ -207,7 +207,7 @@ footer .container {
     margin-right: 10px;
 }
 footer {
-    margin-top: 5px;
+    margin-top: 60px;
     padding: 30px;
     background-color: #26212a;
 
@@ -435,6 +435,19 @@ header {
     box-shadow: 0 0 10px darkviolet;
 
 }
+.card-button-delete {
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.card-button-delete:hover {
+    box-shadow: 0 0 10px red;
+}
 .description {
     list-style: none;
     padding-left: 0;
@@ -476,8 +489,8 @@ header {
 }
 .block .card-button-pay {
     width: 500px;
-
 }
+
 .config_in_basket {
     text-align: center;
     padding: 10px;
@@ -506,4 +519,40 @@ header {
 }
 .card-delete:hover {
     box-shadow: 0 0 10px #a20453;
+}
+.footer-description {
+    margin: 30px;
+    font-size: 10px;
+    color: #c9c9c9;
+}
+.button {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-right: 30px;
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #1b2023;
+    border: 1px solid white;
+    color: white;
+
+}
+.button img {
+    width: 35px;
+    margin-bottom: 10px;
+    margin-left: -20px;
+    margin-right: 10px;
+}
+.button:hover {
+    background-color: red;
+    border: 1px solid red;
+}
+.description-company {
+    font-weight: 900;
+    text-decoration: underline;
+}
+.About-name {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
